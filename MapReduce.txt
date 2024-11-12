@@ -1,0 +1,16 @@
+MapReduce
+
+db.base.mapReduce(
+...     function() {
+...         emit(this.Name, 1);
+...     },
+...     function(key, values) {
+...         return Array.sum(values);
+...     },
+...     {
+...         out: "name_count" // This specifies the output collection for the MapReduce results
+...     }
+... );
+
+
+db.name_count.find().pretty();

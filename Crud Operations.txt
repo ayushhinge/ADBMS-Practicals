@@ -1,0 +1,32 @@
+Crud Operations
+
+db.createCollection("base");
+
+db.base.insertMany([{Name:"Ayush",Rollno:17},{Name:"Tanish",Rollno:21},{Name:"Supriya",Rollno:20},{Name:"Vishal",Rollno:16}]);
+
+db.base.find()
+
+db.base.find().sort({Rollno:1})
+
+db.base.find().limit(2)
+
+db.base.find().skip(2)
+
+db.base.find().count()
+
+db.base.find().pretty()
+
+db.base.find({$or: [{Name:"Ayush"},{Rollno:17}]})
+
+db.users.deleteOne({"name": "Vishal"})
+
+db.base.update({Name:"Ayush"},{$set:{Name:"abhi"}})
+
+db.base.drop()
+
+db.dropDatabase()
+
+3.Query Using Conditionals ($gt):Retrieves all documents where age is greater than 25.
+db.users.find({"age": {$gt: 25}})
+
+

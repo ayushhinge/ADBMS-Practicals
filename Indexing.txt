@@ -1,0 +1,13 @@
+ db.createCollection("base")
+
+db.base.insert([{Name:"Ayush",Rno:17},{Name:"Tanish",Rno:19},{Name:"Saket",Rno:29},
+{Name:"Tejas",Rno:28},{Name:"Abhishek",Rno:14},{Name:"Vishal",Rno:20}])
+
+ db.base.createIndex({"Ayush":-1,"Vishal":1})
+
+db.base.dropIndex("index")
+
+db.base.getIndexes()
+
+db.base.find({"Name":"Ayush"}).explain("executionStats")
+

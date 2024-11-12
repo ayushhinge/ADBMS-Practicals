@@ -1,0 +1,13 @@
+db.base.insert([{Name:"Shray",Rno:30},{Name:"Ayush",Rno:31},{Name:"Abhishek",Rno:14}])
+
+db.base.aggregate([{ $match: {} }])
+
+db.collection.aggregate([{ $match: { age: { $gt: 18 }}}])
+
+db.base.aggregate([{ $sort: { Rno: 1 } }])
+
+db.base.aggregate([{ $group: { _id: null, averageRno: { $avg: "$Rno" } } }])
+
+
+
+
