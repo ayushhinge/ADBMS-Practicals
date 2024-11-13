@@ -18,7 +18,7 @@ db.base.find().pretty()
 
 db.base.find({$or: [{Name:"Ayush"},{Rollno:17}]})
 
-db.users.deleteOne({"name": "Vishal"})
+db.base.deleteOne({"name": "Vishal"})
 
 db.base.update({Name:"Ayush"},{$set:{Name:"abhi"}})
 
@@ -27,6 +27,6 @@ db.base.drop()
 db.dropDatabase()
 
 3.Query Using Conditionals ($gt):Retrieves all documents where age is greater than 25.
-db.users.find({"age": {$gt: 25}})
+db.base.find({"age": {$gt: 25}})
 
 
